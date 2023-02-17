@@ -1,0 +1,18 @@
+@import url('header.css');
+@import url('main.css');
+@import url('cardMes.css');
+@import url('footer.css');
+
+:root {
+    --fonte-principal: 'Montserrat', Poppins;
+    --cinza-padrao: #404040;
+    --branco: #ffffff;
+    --verde: #008000;
+    --vermelho: #FF0000;
+    --azul-saldo: #0000FF;
+    --sombra: rgba(64,64,64,1);
+}
+
+body {
+    font-family: var(--fonte-principal);
+}
