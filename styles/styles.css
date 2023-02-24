@@ -1,7 +1,8 @@
 @import url('header.css');
-@import url('main.css');
+@import url('./main/main.css');
 @import url('cardMes.css');
 @import url('footer.css');
+@import url('./main/modal.css');
 
 :root {
     --fonte-principal: 'Montserrat', Poppins;
