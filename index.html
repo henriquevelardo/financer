@@ -16,10 +16,18 @@
 </head>
 <body>
     <header>
-        <img src="./assets/menu.svg" alt="Menu Hamburguer">
-        <h1 class="logo">Financer</h1>
+        <img src="./assets/menu.svg" alt="Menu Hamburguer" data-imagemMenu>
+        <h1 class="logo" >Financer</h1>
         <h2 class="ano">2023</h2>
     </header>
+    <nav class="menu" data-menu>
+        <ul class="menu__lista">
+            <li class="menu__lista-item menu__lista-item--ativo"><i class="home"></i>Inicio</li>
+            <li class="menu__lista-item"><i class="calendar"></i>Balanço Mensal</li>
+            <li class="menu__lista-item"><i class="calendar"></i>Balanço Anual </li>
+            <li class="menu__lista-item"><i class="exchange"></i>Entradas/Saídas</li>
+        </ul>
+    </nav>
     <main>
         <section class="meses">
             <article class="mes__card">
@@ -219,5 +227,7 @@
     <footer>
         <p class="info__rodape">©Copyright 2023 - Financer</p>
     </footer>
+
+    <script src="./js/menu.js"></script>
 </body>
 </html>
