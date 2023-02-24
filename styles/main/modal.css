@@ -1,0 +1,77 @@
+.modal {
+    position: absolute;
+    background: var(--branco);
+    display: flex;
+    flex-direction: column;
+    width: 94%;
+    margin-left: 3%;
+    margin-top: 3%;
+    height: calc(100vh - 55px);
+    align-items: center;
+    padding: .5rem 0;
+    box-shadow:0px 4px 4px rgba(0, 0, 0, 0.70); 
+}
+
+.modaL__mes{
+    display: flex;
+    flex-direction: column;
+    gap: 20rem;
+}
+
+.modal__mes___titulo{
+    font-size: 24px;
+    text-align: center;
+}
+
+/*.modal__fundo-ativo{
+    max-height: 4rem;
+    height: 3.7rem;
+}*/
+
+.modal__infos{
+    display: grid;
+    grid-template-columns: 1fr  1fr;
+    grid-template-areas: 
+
+        "operacao-entrada  operacao-saida"
+        "seta seta"
+        "valor-entrada  valor-saida"
+    ;
+
+    text-align: center;
+    margin-top: 2rem;
+}
+
+
+
+.modal__operacao, .modal__valor {
+    font-size: 20px;
+}
+
+.modal__operacao-entrada{
+    grid-area: operacao-entrada;
+  
+}
+
+.seta-esquerda{
+    grid-area: seta;
+    width: 90vw;
+}
+
+.modal__operacao-saida{
+    grid-area: operacao-saida;
+    margin-right: 1rem;
+}
+
+.modal__valor-entrada {
+    grid-area: valor-entrada;
+}
+
+.modal__valor-saida{
+    grid-area: valor-saida;
+}
+
+.seta-baixo{
+    position: absolute;
+    margin-top: 15%;
+}

@@ -1,4 +1,4 @@
-h1 align="center">Financer</h1>
+<h1 align="center">Financer</h1>
 <p align="center">Aplicativo para controle financeiro.</p>
 <br>
 
