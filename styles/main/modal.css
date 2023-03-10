@@ -4,18 +4,18 @@
     display: flex;
     flex-direction: column;
     width: 94%;
-    margin-left: 3%;
-    margin-top: 3%;
-    height: calc(100vh - 55px);
+    margin: 3% 0 3% 3%;
+    height: 88%;
     align-items: center;
     padding: .5rem 0;
     box-shadow:0px 4px 4px rgba(0, 0, 0, 0.70); 
 }
 
-.modaL__mes{
+
+.modal__mes{
     display: flex;
     flex-direction: column;
-    gap: 20rem;
+    gap: 2.5rem;
 }
 
 .modal__mes___titulo{
@@ -28,6 +28,7 @@
     height: 3.7rem;
 }*/
 
+
 .modal__infos{
     display: grid;
     grid-template-columns: 1fr  1fr;
@@ -39,7 +40,6 @@
     ;
 
     text-align: center;
-    margin-top: 2rem;
 }
 
 
@@ -65,13 +65,44 @@
 
 .modal__valor-entrada {
     grid-area: valor-entrada;
+    color: var(--verde);
 }
 
 .modal__valor-saida{
     grid-area: valor-saida;
+    color: var(--vermelho);
 }
 
 .seta-baixo{
     position: absolute;
     margin-top: 15%;
+}
+
+.btn__container{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 20%;
+}
+
+.btn {
+    width: 60px;
+    height: 30px;
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-adicionar{
+    background-color: var(--verde);
+
+}
+
+.btn-remover{
+    background-color: var(--vermelho);
+}
+
+.btn-adicionar img{
+    height: 3rem;    
 }
