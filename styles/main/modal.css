@@ -4,19 +4,27 @@
     display: flex;
     flex-direction: column;
     width: 94%;
-    margin: 3% 0 3% 3%;
+    margin: -300% 0 3% 3%;
     height: 88%;
     align-items: center;
     padding: .5rem 0;
     box-shadow:0px 4px 4px rgba(0, 0, 0, 0.70); 
+    justify-content: space-between;
+    transition: .20s;
+}
+
+.modal--ativo{
+    margin: 3% 0 3% 3%;
 }
 
 
 .modal__mes{
-    display: flex;
+    display: none;
     flex-direction: column;
     gap: 2.5rem;
 }
+
+
 
 .modal__mes___titulo{
     font-size: 24px;
@@ -37,6 +45,7 @@
         "operacao-entrada  operacao-saida"
         "seta seta"
         "valor-entrada  valor-saida"
+
     ;
 
     text-align: center;
@@ -66,16 +75,19 @@
 .modal__valor-entrada {
     grid-area: valor-entrada;
     color: var(--verde);
+    margin-top: .5rem;
 }
 
 .modal__valor-saida{
     grid-area: valor-saida;
     color: var(--vermelho);
+    margin-top: .5rem;
 }
 
 .seta-baixo{
+    display: none;
     position: absolute;
-    margin-top: 15%;
+    margin-top: 14%;
 }
 
 .btn__container{
@@ -106,3 +118,28 @@
 .btn-adicionar img{
     height: 3rem;    
 }
+
+/* Parte inferior do modal */
+
+.modal__total{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    margin: .5rem 0;
+    gap: 1.5rem;
+}
+
+.modal__total___valor{
+    color: var(--azul-saldo);
+    font-size: 20px;  
+}
+
+.modal__total___infos{
+    background-color:var(--cinza-padrao);
+    color: var(--branco);
+    padding: 1rem 3rem;
+    font-size: 15px;
+}
+
+
+
