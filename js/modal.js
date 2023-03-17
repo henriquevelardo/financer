@@ -5,6 +5,8 @@ const modalMes = document.querySelector("[data-modal-mes]")
 const modalTotal = document.querySelector("[data-modal-total]")
 const fundoMain = document.querySelector("[data-main]")
 
+
+
 const arrayDosMeses = Array.from(mes)
 
 arrayDosMeses.forEach(mes =>{
@@ -20,6 +22,10 @@ function exibeModal(mes, mesClicado){
         modalTotal.style="display:flex"
 
         console.log("clicou em:" + mesClicado.mes)
+
+        const tituloMes = document.querySelector("[data-titulo]")
+        tituloMes.innerHTML = `${mesClicado.mes}`
+
     }) 
 }
 
