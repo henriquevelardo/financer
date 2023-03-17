@@ -86,8 +86,7 @@
 
 .seta-baixo{
     display: none;
-    position: absolute;
-    margin-top: 14%;
+    margin-top: -57%;
 }
 
 .btn__container{
@@ -125,7 +124,7 @@
     display: none;
     flex-direction: column;
     align-items: center;
-    margin: 3rem;
+    margin: .2rem;
     gap: 1.5rem;
     width: 100%;
 }
