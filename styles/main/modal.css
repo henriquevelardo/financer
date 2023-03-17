@@ -125,8 +125,9 @@
     display: none;
     flex-direction: column;
     align-items: center;
-    margin: .5rem 0;
+    margin: .2rem;
     gap: 1.5rem;
+    width: 100%;
 }
 
 .modal__total___valor{
@@ -135,11 +136,24 @@
 }
 
 .modal__total___infos{
-    background-color:var(--cinza-padrao);
-    color: var(--branco);
-    padding: 1rem 3rem;
-    font-size: 15px;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    gap: .3rem;
 }
+
+.btn-voltar, .modal__detalhes {
+    background-color:var(--cinza-padrao); 
+    padding: 1rem;
+    color: var(--branco);
+    font-family: var(--fonte-principal);
+    text-align: center;
+    font-size: 15px;
+    width: 45%;
+}
+
+
+
 
 
 
