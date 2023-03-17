@@ -5,3 +5,4 @@ imagemMenu.addEventListener('click', () => {
     menu.classList.toggle('menu--ativo')
     imagemMenu.classList.toggle('menu-img')
 })
+

@@ -18,4 +18,3 @@
 ## Layout
 <p align="center"> Home </p>
 <p align="center"><img src="https://github.com/henriquevelardo/financer/blob/main/layout-figma/Home.png" alt="Javascript: validando formulários"></p>
-

@@ -28,9 +28,35 @@
             <li class="menu__lista-item"><i class="exchange"></i>Entradas/Saídas</li>
         </ul>
     </nav>
-    <main>
+    <main data-main>
+        <section class="modal" data-modal>
+            <div class="modal__mes" data-modal-mes>
+                    <h2 class="modal__mes___titulo" data-titulo></h2>
+                    <div class="modal__infos">
+                        <h3 class="modal__operacao modal__operacao-entrada">Entradas</h3>
+                        <h3 class="modal__operacao modal__operacao-saida">Saídas</h3>
+                        <img src="./assets/Line 1.svg" alt="" class="seta-esquerda">
+                        
+                        <p class="modal__valor modal__valor-entrada">100,00</p>
+                        <p class="modal__valor modal__valor-saida">-100,00</p>    
+                        
+                    </div>
+                    <div class="btn__container">
+                        <button class="btn btn-adicionar"><img src="./assets/Plus Math.svg" alt="Sinal de adição"></button>
+                        <button class="btn btn-remover"><img src="./assets/Subtract.svg" alt="Sinal de subtração"></button>
+                    </div>
+                </div>
+                <img src="./assets/Line 2.svg" alt="" class="seta-baixo" data-divisao>
+                <div class="modal__total" data-modal-total>
+                    <p class="modal__total___valor">0,00</p>
+                    <div class="modal__total___infos">
+                        <button class="btn-voltar" data-voltar>Voltar</button>
+                        <button class="btn-voltar">Detalhes</button>
+                    </div>
+                </div>
+            </section>
         <section class="meses">
-            <article class="mes__card">
+            <article class="mes__card" data-mes="Janeiro">
                 <h2 class="mes__card-nome">Janeiro</h2>
                 <div class="mes__card-descricao">
                     <div class="mes__card-descricao--infos">
@@ -46,7 +72,7 @@
                     </div>
                 </div>
             </article>
-            <article class="mes__card">
+            <article class="mes__card" data-mes="Fevereiro">
                 <h2 class="mes__card-nome">Fevereiro</h2>
                 <div class="mes__card-descricao">
                     <div class="mes__card-descricao--infos">
@@ -62,7 +88,7 @@
                     </div>
                 </div>
             </article>
-            <article class="mes__card">
+            <article class="mes__card" data-mes="Março">
                 <h2 class="mes__card-nome">Março</h2>
                 <div class="mes__card-descricao">
                     <div class="mes__card-descricao--infos">
@@ -78,7 +104,7 @@
                     </div>
                 </div>
             </article>
-            <article class="mes__card">
+            <article class="mes__card" data-mes="Abril">
                 <h2 class="mes__card-nome">Abril</h2>
                 <div class="mes__card-descricao">
                     <div class="mes__card-descricao--infos">
@@ -94,7 +120,7 @@
                     </div>
                 </div>
             </article>
-            <article class="mes__card">
+            <article class="mes__card" data-mes="Maio">
                 <h2 class="mes__card-nome">Maio</h2>
                 <div class="mes__card-descricao">
                     <div class="mes__card-descricao--infos">
@@ -110,7 +136,7 @@
                     </div>
                 </div>
             </article>
-            <article class="mes__card">
+            <article class="mes__card" data-mes="Junho">
                 <h2 class="mes__card-nome">Junho</h2>
                 <div class="mes__card-descricao">
                     <div class="mes__card-descricao--infos">
@@ -126,7 +152,7 @@
                     </div>
                 </div>
             </article>
-            <article class="mes__card">
+            <article class="mes__card" data-mes="Julho">
                 <h2 class="mes__card-nome">Julho</h2>
                 <div class="mes__card-descricao">
                     <div class="mes__card-descricao--infos">
@@ -142,7 +168,7 @@
                     </div>
                 </div>
             </article>
-            <article class="mes__card">
+            <article class="mes__card" data-mes="Agosto">
                 <h2 class="mes__card-nome">Agosto</h2>
                 <div class="mes__card-descricao">
                     <div class="mes__card-descricao--infos">
@@ -158,7 +184,7 @@
                     </div>
                 </div>
             </article>
-            <article class="mes__card">
+            <article class="mes__card" data-mes="Setembro">
                 <h2 class="mes__card-nome">Setembro</h2>
                 <div class="mes__card-descricao">
                     <div class="mes__card-descricao--infos">
@@ -174,7 +200,7 @@
                     </div>
                 </div>
             </article>
-            <article class="mes__card">
+            <article class="mes__card" data-mes="Outubro">
                 <h2 class="mes__card-nome">Outubro</h2>
                 <div class="mes__card-descricao">
                     <div class="mes__card-descricao--infos">
@@ -190,7 +216,7 @@
                     </div>
                 </div>
             </article>
-            <article class="mes__card">
+            <article class="mes__card" data-mes="Novembro">
                 <h2 class="mes__card-nome">Novembro</h2>
                 <div class="mes__card-descricao">
                     <div class="mes__card-descricao--infos">
@@ -206,7 +232,7 @@
                     </div>
                 </div>
             </article>
-            <article class="mes__card">
+            <article class="mes__card" data-mes="Dezembro">
                 <h2 class="mes__card-nome">Dezembro</h2>
                 <div class="mes__card-descricao">
                     <div class="mes__card-descricao--infos">
@@ -228,6 +254,6 @@
         <p class="info__rodape">©Copyright 2023 - Financer</p>
     </footer>
 
-    <script src="./js/menu.js"></script>
+    <script src="./js/script.js"  type="module"></script>
 </body>
 </html>

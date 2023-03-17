@@ -28,6 +28,7 @@ header {
     padding: 2rem 0;
     left: -100vw;
     transition: .10s;
+    z-index: 1;
 }
 
 .menu--ativo {
