@@ -87,7 +87,8 @@
 
 .seta-baixo{
     display: none;
-    margin-top: -20vh;
+    position: absolute;
+    margin-top: 2.5rem;
 }
 
 .btn__container{
