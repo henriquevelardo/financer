@@ -3,13 +3,11 @@
 <br>
 
 
-## Tecnologias utilizadas para manipulação e interação
-* JavaScript
-
-
-## Tecnologias utilizadas para construção da pagina
-* HTML 5
-* CSS 3
+## Tecnologias utilizadas 
+* HTML
+* CSS
+* ReactJS
+* Node
 
 
 ## Metodologias
