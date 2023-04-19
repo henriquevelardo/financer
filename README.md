@@ -1,5 +1,5 @@
 <h1 align="center">Financer</h1>
-<p align="center">Aplicativo para controle financeiro.</p>
+<p align="center">Aplicação web para controle financeiro.</p>
 <br>
 
 

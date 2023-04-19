@@ -1,0 +1,31 @@
+@import url('./Componentes/Header/Header.css');
+@import url('./Componentes/Nav/Nav.css');
+
+:root {
+  --fonte-principal: 'Montserrat', Poppins;
+  --cinza-padrao: #404040;
+  --branco: #ffffff;
+  --verde: #008000;
+  --vermelho: #FF0000;
+  --azul-saldo: #0000FF;
+  --sombra: rgba(64,64,64,1);
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--fonte-principal) ;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}

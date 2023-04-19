@@ -1,0 +1,19 @@
+{
+  "name": "financer",
+  "version": "1.0.0",
+  "description": "<h1 align=\"center\">Financer</h1>\r <p align=\"center\">Aplicação web para controle financeiro.</p>\r <br>",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/henriquevelardo/financer.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/henriquevelardo/financer/issues"
+  },
+  "homepage": "https://github.com/henriquevelardo/financer#readme"
+}
