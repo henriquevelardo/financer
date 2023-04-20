@@ -1,4 +1,4 @@
-import Header from "../../Componentes/Header";
+import Header from "Componentes/Header";
 
 function Main() {
   return (
