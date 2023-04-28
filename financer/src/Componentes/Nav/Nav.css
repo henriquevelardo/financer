@@ -18,6 +18,7 @@
     box-shadow:0px 4px 4px rgba(0, 0, 0, 0.35); 
     padding: 2rem 0;
     left: -100vw;
+    top: 6vh;
     transition: .10s;
     z-index: 1;
 }

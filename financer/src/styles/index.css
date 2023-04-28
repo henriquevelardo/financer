@@ -1,5 +1,12 @@
-@import url('./Componentes/Header/Header.css');
-@import url('./Componentes/Nav/Nav.css');
+@import url('./reset.css');
+@import url('Componentes/Header/Header.css');
+@import url('Componentes/Nav/Nav.css');
+@import url('Pages/Inicio/Inicio.css');
+@import url('Componentes/Meses/Meses.css');
+@import url('Componentes/Mes/Mes.css');
+@import url('Componentes/Footer/Footer.css');
+@import url('Componentes/Modal/Modal.css');
+
 
 :root {
   --fonte-principal: 'Montserrat', Poppins;
@@ -20,7 +27,7 @@
 
 body {
   margin: 0;
-  font-family: var(--fonte-principal) ;
+  font-family: var(--fonte-principal);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

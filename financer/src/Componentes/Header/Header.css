@@ -1,4 +1,4 @@
-.header {
+header {
     background: var(--cinza-padrao);
     display: flex;
     justify-content: space-between;
@@ -7,6 +7,6 @@
     color: var(--branco);
 }
 
-.header h1, h2 {
+header h1, h2 {
     font-size: 24px;
 }
