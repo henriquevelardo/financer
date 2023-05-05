@@ -1,11 +1,10 @@
 import "./Mes.css";
-import Modal from "Componentes/Modal";
 
-export default function Mes({ mes, manipulaModal }) {
+export default function Mes({ mes, manipulaModal, }) {
 
   return (
     <>
-      <article className="mes__card" onClick={manipulaModal}>
+      <article className="mes__card" onClick={() => manipulaModal(mes)} >
         <h2 className="mes__card-nome">{mes.nome}</h2>
         <div className="mes__card-descricao">
           <div className="mes__card-descricao--infos">

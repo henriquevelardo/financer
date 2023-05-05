@@ -3,7 +3,10 @@ import "./Modal.css";
 import setaVertical from "assets/Line 1.svg";
 import setaHorizontal from "assets/Line 2.svg";
 
-export default function Modal({ abreModal, fechaModal ,mes }) {
+export default function Modal({ abreModal, fechaModal , mes }) {
+
+console.log(mes.nome)
+
   return (
     <section className={`modal ${abreModal ? "modal--ativo" : "" }`}>
       <div className="modal__mes">
@@ -13,8 +16,8 @@ export default function Modal({ abreModal, fechaModal ,mes }) {
           <h3 className="modal__operacao modal__operacao-saida">Saídas</h3>
           <img src={setaVertical} alt="" className="seta-esquerda" />
 
-          <p className="modal__valor modal__valor-entrada">100,00</p>
-          <p className="modal__valor modal__valor-saida">-100,00</p>
+          <p className="modal__valor modal__valor-entrada">{mes.entradas}</p>
+          <p className="modal__valor modal__valor-saida">{mes.saidas}</p>
         </div>
         <div className="btn__container">
           <button className="btn btn-adicionar">

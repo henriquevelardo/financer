@@ -16,7 +16,7 @@
 }   
 
 .modal--ativo{
-    margin: .5% 0 3% 2%;
+    margin: 3% 0 3% 3%;
 }
 
 
@@ -31,7 +31,7 @@
 .modal__mes___titulo{
     font-size: 24px;
     text-align: center;
-    color: var(--cinza-padrao);
+    color: var(--preto);
 }
 
 /*.modal__fundo-ativo{
