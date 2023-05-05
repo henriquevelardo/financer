@@ -1,19 +1,11 @@
 import "./Mes.css";
-import { useState } from "react";
 import Modal from "Componentes/Modal";
 
-export default function Mes({ mes }) {
-  const [mostraModal, setMostraModal] = useState(false);
-
-  const ativaModal = () => {
-    setMostraModal(!mostraModal);
-    console.log(mostraModal);
-  };
+export default function Mes({ mes, manipulaModal }) {
 
   return (
     <>
-      <Modal modal={mostraModal} mes={mes} />
-      <article className="mes__card" onClick={ativaModal}>
+      <article className="mes__card" onClick={manipulaModal}>
         <h2 className="mes__card-nome">{mes.nome}</h2>
         <div className="mes__card-descricao">
           <div className="mes__card-descricao--infos">
