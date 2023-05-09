@@ -14,9 +14,9 @@ export default function Mes({ mes, manipulaModal, }) {
           </div>
           <img src="assets/divisao.svg" alt="divisão" className="linha" />
           <div className="mes__card-descricao--valor">
-            <p>{mes.entradas}</p>
-            <p>{mes.saidas}</p>
-            <p>{mes.total}</p>
+            <p>100,00</p>
+            <p>-100,00</p>
+            <p>{mes.total}</p> 
           </div>
         </div>
       </article>
