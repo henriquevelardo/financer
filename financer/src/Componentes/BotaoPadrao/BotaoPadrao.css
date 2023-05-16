@@ -1,0 +1,9 @@
+.btn-padrao {
+    background-color:var(--cinza-padrao); 
+    padding: 1rem;
+    color: var(--branco);
+    font-family: var(--fonte-principal);
+    text-align: center;
+    font-size: 15px;
+    width: 45%;
+}

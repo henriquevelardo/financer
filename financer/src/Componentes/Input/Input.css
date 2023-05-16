@@ -1,0 +1,11 @@
+input {
+    border-radius: 10px;
+    padding: 10px 0px;
+    width: 100%;
+}
+
+input::placeholder{
+    font-family: var(--fonte-principal);
+    text-align: center;
+    font-size: 1rem;
+}

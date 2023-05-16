@@ -2,10 +2,12 @@ import React from "react";
 import "./Modal.css";
 import setaVertical from "assets/Line 1.svg";
 import setaHorizontal from "assets/Line 2.svg";
+import BotaoOperacao from "Componentes/BotaoOperacao";
+import imagemAdicionar from "assets/Plus Math.svg";
+import imagemSubtrair from "assets/Subtract.svg";
+import BotaoPadrao from "Componentes/BotaoPadrao";
 
 export default function Modal({ abreModal, fechaModal, mes }) {
-  console.log(mes);
-
   return (
     <section className={`modal ${abreModal ? "modal--ativo" : ""}`}>
       <div className="modal__mes">
@@ -19,38 +21,40 @@ export default function Modal({ abreModal, fechaModal, mes }) {
           <ul className="modal__valor modal__valor-entrada">
             {mes.entradas &&
               mes.entradas.map((entrada, index) => {
-                return (
-                  <li key={index}>{entrada.salario}</li>
-                );
+                return <li key={index}>{entrada.salario}</li>;
               })}
           </ul>
 
           <ul className="modal__valor modal__valor-saida">
-            {mes.saidas && mes.saidas.map((saida, index) => {
-              return (
-                <li key={index}>{saida.comida}</li>
-              )
-            })}
+            {mes.saidas &&
+              mes.saidas.map((saida, index) => {
+                return <li key={index}>{saida.comida}</li>;
+              })}
           </ul>
-
         </div>
         <div className="btn__container">
-          <button className="btn btn-adicionar">
-            <img src="./assets/Plus Math.svg" alt="Sinal de adição" />
-          </button>
-          <button className="btn btn-remover">
-            <img src="./assets/Subtract.svg" alt="Sinal de subtração" />
-          </button>
+          <div className="btn__operacao">
+            <BotaoOperacao
+              imagem={imagemAdicionar}
+              alt="Sinal de soma"
+              operacao={"soma"}
+            />
+          </div>
+          <div className="btn__operacao">
+            <BotaoOperacao
+              imagem={imagemSubtrair}
+              alt="Sinal de subtração"
+              operacao={"subtracao"}
+            />
+          </div>
         </div>
       </div>
       <img src={setaHorizontal} alt="" className="seta-baixo" />
       <div className="modal__total">
         <p className="modal__total___valor">0,00</p>
         <div className="modal__total___infos">
-          <button className="btn-voltar" onClick={fechaModal}>
-            Voltar
-          </button>
-          <button className="btn-voltar">Detalhes</button>
+          <BotaoPadrao onClick={fechaModal}> Voltar </BotaoPadrao>
+          <BotaoPadrao> Detalhes </BotaoPadrao>
         </div>
       </div>
     </section>

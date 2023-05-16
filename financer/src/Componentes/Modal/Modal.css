@@ -95,31 +95,15 @@
 
 .btn__container{
     display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    gap: 20%;
 }
 
-.btn {
-    width: 60px;
-    height: 30px;
-    border-radius: 40px;
+.btn__operacao {
     display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.btn-adicionar{
-    background-color: var(--verde);
-
-}
-
-.btn-remover{
-    background-color: var(--vermelho);
-}
-
-.btn-adicionar img{
-    height: 3rem;    
+    justify-content: space-evenly;
+    align-items: start;
+    gap: 20%;
+    height: 250px;
+    width: 100%;
 }
 
 /* Parte inferior do modal */
@@ -145,15 +129,6 @@
     gap: .3rem;
 }
 
-.btn-voltar, .modal__detalhes {
-    background-color:var(--cinza-padrao); 
-    padding: 1rem;
-    color: var(--branco);
-    font-family: var(--fonte-principal);
-    text-align: center;
-    font-size: 15px;
-    width: 45%;
-}
 
 
 
