@@ -1,41 +1,18 @@
-import BotaoPadrao from "Componentes/BotaoPadrao";
-import Input from "Componentes/Input";
+import Formulario from "Componentes/Formulario/Formulario";
 import React, { useState } from "react";
 
 export default function BotaoOperacao({ imagem, alt, operacao }) {
-  const [input, setInput] = useState(false);
+  const [formulario, setFormulario] = useState(false);
 
-  const mostraInput = () => {
-    setInput(true);
+  const mostraFormulario = () => {
+    setFormulario(true);
   };
-
-  const escondeInput = () => {
-    setTimeout(() => setInput(false), 1)
-  }
-
 
   return (
     <>
-      <span
-        onClick={mostraInput}
-        className={`btn ${
-          operacao === "soma" ? "btn-adicionar" : "btn-remover"
-        } ${input ? "btn-large" : ""}`}
-      >
-        {input ? "" : <img src={imagem} alt={alt} />}
-        <fieldset
-          className={`${
-            input ? "mostra-input" : ""
-          }`}
-        >
-          <Input type={"text"} id={"inputModalNome"}>
-            Digite o nome:
-          </Input>
-          <Input type={"number"} id={"inputModalValor"}>
-            Digite o valor:
-          </Input>
-          <BotaoPadrao onClick={escondeInput}> Salvar</BotaoPadrao>
-        </fieldset>
+      <span onClick={mostraFormulario} className={`btn ${ operacao === "soma" ? "btn-adicionar" : "btn-remover"} ${formulario ? "btn-large" : ""}`}>
+        {formulario ? "" : <img src={imagem} alt={alt} />}
+        <Formulario formulario={formulario} setFormulario={setFormulario} />
       </span>
     </>
   );

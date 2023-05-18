@@ -1,10 +1,10 @@
 import React, { Children } from 'react'
 import "./BotaoPadrao.css"
 
-export default function BotaoPadrao({children, onClick}) {
+export default function BotaoPadrao({children, onClick, type}) {
 
   return (
-    <button className="btn-padrao" onClick={onClick} >
+    <button className="btn-padrao" onClick={onClick} type={type} >
         {children}
     </button>
   )

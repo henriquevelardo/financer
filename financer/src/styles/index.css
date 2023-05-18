@@ -9,6 +9,7 @@
 @import url('Componentes/BotaoOperacao/BotaoOperacao.css');
 @import url('Componentes/BotaoPadrao/BotaoPadrao.css');
 @import url('Componentes/Input/Input.css');
+@import url('Componentes/Formulario/Formulario.css');
 
 :root {
   --fonte-principal: 'Montserrat', Poppins;
