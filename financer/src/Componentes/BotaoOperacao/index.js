@@ -12,7 +12,7 @@ export default function BotaoOperacao({ imagem, alt, operacao }) {
     <>
       <span onClick={mostraFormulario} className={`btn ${ operacao === "soma" ? "btn-adicionar" : "btn-remover"} ${formulario ? "btn-large" : ""}`}>
         {formulario ? "" : <img src={imagem} alt={alt} />}
-        <Formulario formulario={formulario} setFormulario={setFormulario} />
+        <Formulario formulario={formulario} setFormulario={setFormulario} operacao={operacao}/>
       </span>
     </>
   );

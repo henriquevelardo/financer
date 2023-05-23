@@ -6,7 +6,12 @@ import { useEffect, useState } from "react";
 export default function Meses() {
   const [mostraModal, setMostraModal] = useState(false);
   let [mesClicado, setMesClicado] = useState("");
-  const [meses, setMeses] = useState(dadosMeses);
+  const [meses, setMeses] = useState([]);
+
+  useEffect(() => {
+    setMeses([dadosMeses])
+  }, [])
+
 
   const ativaModal = (mes) => {
     setMostraModal(!mostraModal);
@@ -19,8 +24,8 @@ export default function Meses() {
     <>
       <Modal abreModal={mostraModal} mes={mesClicado} fechaModal={ativaModal} />
       <section className="meses">
-        {meses.map((mes) => (
-          <Mes key={mes.id} mes={mes} manipulaModal={ativaModal} />
+        {meses.map((item) => (
+          <Mes key={item.mes.id} mes={item.mes} manipulaModal={ativaModal} />
         ))}
       </section>
     </>

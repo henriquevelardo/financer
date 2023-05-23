@@ -1,14 +1,5 @@
-[
-  {
-    "id": 1,
-    "nome": "Janeiro",
-    "entradas": [
-      {"salario": "100,00"},
-      {"pix" : "110,00"}
-    ],
-    "saidas": [
-      {"comida" : "-100,00"}
-    ],
-    "total": "0,00"
-  }
-]
+{
+  "mes": [
+    
+  ]
+}
