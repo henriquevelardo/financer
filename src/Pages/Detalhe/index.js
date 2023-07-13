@@ -1,9 +1,10 @@
+import Mes from "Componentes/Mes";
 
 
 function MesDetalhado() {
   return (
     <main>
-      <h1>Teste de rota</h1>
+      <Mes />
     </main>
   );
 }

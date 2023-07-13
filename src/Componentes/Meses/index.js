@@ -1,7 +1,7 @@
-import Mes from "Componentes/Mes";
 import dadosMeses from "json/meses.json";
 import Modal from "Componentes/Modal";
 import { useEffect, useState } from "react";
+import CardMes from "Componentes/CardMes";
 
 export default function Meses() {
   const [mostraModal, setMostraModal] = useState(false);
@@ -25,7 +25,7 @@ export default function Meses() {
       <Modal abreModal={mostraModal} mes={mesClicado} fechaModal={ativaModal} />
       <section className="meses">
         {meses.map((item) => (
-          <Mes key={item.mes.id} mes={item.mes} manipulaModal={ativaModal} />
+          <CardMes key={item.mes.id} mes={item.mes} manipulaModal={ativaModal} />
         ))}
       </section>
     </>

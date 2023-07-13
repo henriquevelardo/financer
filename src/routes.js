@@ -3,7 +3,7 @@ import Header from 'Componentes/Header'
 import Inicio from './Pages/Inicio/index'
 import React from 'react'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import MesDetalhado from 'Pages/MesDetalhado'
+import Detalhe from 'Pages/Detalhe'
 
 export default function AppRoutes() {
   return (
@@ -12,7 +12,7 @@ export default function AppRoutes() {
       
         <Routes>
             <Route path='/' element={<Inicio />}/>
-            <Route path='/detalhe' element={<MesDetalhado />}/>
+            <Route path='/detalhe' element={<Detalhe />}/>
         </Routes>
 
         <Footer />
