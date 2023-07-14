@@ -38,6 +38,7 @@ export default function Modal({ abreModal, fechaModal, mes }) {
               imagem={imagemAdicionar}
               alt="Sinal de soma"
               operacao={"entradas"}
+              variante="entradas"
             />
           </div>
           <div className="btn__operacao">
@@ -45,6 +46,7 @@ export default function Modal({ abreModal, fechaModal, mes }) {
               imagem={imagemSubtrair}
               alt="Sinal de subtração"
               operacao={"saidas"}
+              variante="saidas"
             />
           </div>
         </div>
