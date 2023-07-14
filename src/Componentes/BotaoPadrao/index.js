@@ -1,6 +1,8 @@
 import React, { Children } from 'react'
 import "./BotaoPadrao.css"
 
+
+
 export default function BotaoPadrao({children, onClick, type}) {
 
   return (

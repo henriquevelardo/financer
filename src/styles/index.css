@@ -2,13 +2,13 @@
 @import url('Componentes/Header/Header.css');
 @import url('Componentes/Nav/Nav.css');
 @import url('Componentes/Meses/Meses.css');
-@import url('Componentes/Mes/Mes.css');
 @import url('Componentes/Footer/Footer.css');
 @import url('Componentes/Modal/Modal.css');
 @import url('Componentes/BotaoOperacao/BotaoOperacao.css');
 @import url('Componentes/BotaoPadrao/BotaoPadrao.css');
 @import url('Componentes/Input/Input.css');
 @import url('Componentes/Formulario/Formulario.css');
+
 
 :root {
   --fonte-principal: 'Montserrat', Poppins;

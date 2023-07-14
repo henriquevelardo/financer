@@ -23,12 +23,12 @@ export default function Formulario({ formulario, setFormulario, operacao }) {
   }, []);
 
 
-  useEffect(() => {
-    console.log("Atualização de estado: ", entradas);
-    if (entradas.length > 0) {
-      enviaInputs(entradas);
-    }
-  }, [entradas]);
+  // useEffect(() => {
+  //   console.log("Atualização de estado: ", entradas);
+  //   if (entradas.length > 0) {
+  //     enviaInputs(entradas);
+  //   }
+  // }, [entradas]);
 
   const aoSalvar = async (event) => {
     event.preventDefault();

@@ -1,12 +1,12 @@
 export const recebeInputs = async() => {
-    const request = await fetch(`http://localhost:5000/mes/1`)
+    const request = await fetch(`https://my-json-server.typicode.com/henriquevelardo/financerAPI/mes`)
     const resposta = await request.json()
 
     return resposta.entradas
 }
 
 export const enviaInputs = async(dados) => {
-    const request = await fetch(`http://localhost:5000/mes/1`, {
+    const request = await fetch(`https://my-json-server.typicode.com/henriquevelardo/financerAPI/mes`, {
         method: 'PATCH', 
         headers: {
             "Content-type" : "application/json"
