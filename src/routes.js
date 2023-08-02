@@ -9,7 +9,6 @@ import { GlobalStyles } from 'Componentes/GlobalStyles/GlobalStyles'
 export default function AppRoutes() {
   return (
     <BrowserRouter>
-        <GlobalStyles />
         <Header />
       
         <Routes>

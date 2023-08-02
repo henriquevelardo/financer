@@ -6,6 +6,7 @@ export default function MenuHamburguer() {
 
   const ativaMenu = () => {
     setMenuAtivo(!menuAtivo)
+
   }
  
   return (
