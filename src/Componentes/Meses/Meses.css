@@ -1,8 +1,0 @@
-.meses {
-    display: grid;
-    grid-template-columns: repeat(2, auto);
-    grid-template-rows: repeat(6, auto);
-    column-gap: .1rem;
-    row-gap: .7rem;
-    padding: .7rem .3rem;
-}

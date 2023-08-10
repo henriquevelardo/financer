@@ -1,5 +1,4 @@
 import React from "react";
-import "./Modal.css";
 import setaVertical from "assets/Line 1.svg";
 import setaHorizontal from "assets/Line 2.svg";
 import BotaoOperacao from "Componentes/BotaoOperacao";
@@ -11,14 +10,14 @@ import styled from "@emotion/styled";
 const ModalEstilizado = styled.section`
   &.modal {
     position: absolute;
-    background: ${props => props.theme.cores.branco};
+    background: ${(props) => props.theme.cores.branco};
     display: flex;
     flex-direction: column;
     width: 94%;
     margin: -370% 0 3% 3%;
     height: 760px;
     align-items: center;
-    padding: 0.5rem 0;
+    padding: 0.5rem 0.5rem;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.7);
     justify-content: space-between;
     transition: 0.2s;
@@ -29,24 +28,20 @@ const ModalEstilizado = styled.section`
     margin: 3% 0 3% 3%;
   }
 
-  &.modal__mes {
+  & .modal__mes {
     display: flex;
     flex-direction: column;
-    gap: 2.5rem;
+    row-gap: 2.5rem;
+    max-width: 100%;
   }
 
-  &.modal__mes___titulo {
+  & .modal__mes___titulo {
     font-size: 24px;
     text-align: center;
     color: var(--preto);
   }
 
-  /*.modal__fundo-ativo{
-  max-height: 4rem;
-  height: 3.7rem;
-}*/
-
-&.modal__infos {
+  & .modal__infos {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-areas:
@@ -57,47 +52,48 @@ const ModalEstilizado = styled.section`
     text-align: center;
   }
 
-  &.modal__operacao, .modal__valor {
+  & .modal__operacao,
+  .modal__valor {
     font-size: 20px;
   }
 
-  &.modal__operacao-entrada {
+  & .modal__operacao-entrada {
     grid-area: operacao-entrada;
   }
 
-  &.seta-esquerda {
+  & .seta-esquerda {
     grid-area: seta;
     width: 90vw;
   }
 
-  &.modal__operacao-saida {
+  & .modal__operacao-saida {
     grid-area: operacao-saida;
     margin-right: 1rem;
   }
 
   &.modal__valor-entrada {
     grid-area: valor-entrada;
-    color: ${props => props.theme.cores.verde};
+    color: ${(props) => props.theme.cores.verde};
     margin-top: 0.5rem;
   }
 
-  &.modal__valor-saida {
+  & .modal__valor-saida {
     grid-area: valor-saida;
     color: var(--vermelho);
     margin-top: 0.5rem;
   }
 
-  &.seta-baixo {
+  & .seta-baixo {
     display: block;
     position: absolute;
     margin-top: 2.5rem;
   }
 
-  &.btn__container {
+  & .btn__container {
     display: flex;
   }
 
-  &.btn__operacao {
+  & .btn__operacao {
     display: flex;
     justify-content: space-evenly;
     align-items: start;
@@ -108,7 +104,7 @@ const ModalEstilizado = styled.section`
 
   /* Parte inferior do modal */
 
-  &.modal__total {
+  & .modal__total {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -117,12 +113,12 @@ const ModalEstilizado = styled.section`
     width: 100%;
   }
 
-  &.modal__total___valor {
-    color: ${props => props.theme.cores.azulSaldo};
+  & .modal__total___valor {
+    color: ${(props) => props.theme.cores.azulSaldo};
     font-size: 20px;
   }
 
-  &.modal__total___infos {
+  & .modal__total___infos {
     display: flex;
     width: 100%;
     justify-content: center;
@@ -178,8 +174,8 @@ export default function Modal({ abreModal, fechaModal, mes }) {
       <div className="modal__total">
         <p className="modal__total___valor">0,00</p>
         <div className="modal__total___infos">
-          <BotaoPadrao onClick={fechaModal}> Voltar </BotaoPadrao>
-          <BotaoPadrao> Detalhes </BotaoPadrao>
+          <BotaoPadrao onClick={fechaModal} hierarquia="secundaria"> Voltar </BotaoPadrao>
+          <BotaoPadrao hierarquia="primaria"> Detalhes </BotaoPadrao>
         </div>
       </div>
     </ModalEstilizado>

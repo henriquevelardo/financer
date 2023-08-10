@@ -1,37 +1,28 @@
-import { css } from "@emotion/css";
 import styled from "@emotion/styled";
 import Formulario from "Componentes/Formulario";
 import React, { useState } from "react";
 
-const corBotao = {
-  entradas: 'var(--verde)',
-  saidas: 'var(--vermelho)'
-}
-
 const BotaoOperacaoEstilizado = styled.span`
   width: 60px;
   height: 30px;
+  border: 1px solid ${props => props.theme.cores.preto};
   border-radius: 40px;
+  box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.5);
   display: flex;
   align-items: center;
   justify-content: center;
   transition: 0.2s;
-  background-color: ${(props) => props.estilo};
-  
+  background-color: ${(props) =>
+    props.operacao === "entradas"
+      ? props.theme.cores.verde
+      : props.theme.cores.vermelho};
 
-  .btn-large {
-    width: 97%;
+  &.btn-large {
+    width: 95%;
     height: 70%;
     border-radius: 2px;
     box-sizing: border-box;
-  }
-
-  .btn-adicionar img {
-    height: 3rem;
-  }
-
-  form {
-    display: none;
+    display: flex;
   }
 
   .mostra-input {
@@ -39,13 +30,12 @@ const BotaoOperacaoEstilizado = styled.span`
     flex-direction: column;
     align-items: center;
     gap: 12px;
-    padding: 2px;
+    padding: 6px;
   }
 `;
 
-export default function BotaoOperacao({ variante, imagem, alt, operacao}) {
+export default function BotaoOperacao({ imagem, alt, operacao }) {
   const [formulario, setFormulario] = useState(false);
-  const estilo = corBotao[variante]
 
   const mostraFormulario = () => {
     setFormulario(true);
@@ -54,11 +44,9 @@ export default function BotaoOperacao({ variante, imagem, alt, operacao}) {
   return (
     <>
       <BotaoOperacaoEstilizado
-        estilo={estilo}
         onClick={mostraFormulario}
-        className={`btn ${
-          operacao === "entradas" ? "btn-adicionar" : "btn-remover"
-        } ${formulario ? "btn-large" : ""}`}
+        className={`${formulario ? "btn-large" : ""}`}
+        operacao={operacao}
       >
         {formulario ? "" : <img src={imagem} alt={alt} />}
         <Formulario

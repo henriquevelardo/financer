@@ -11,6 +11,7 @@ const tema = {
     vermelho: "#FF0000",
     azulSaldo: "#0000FF",
     corSombra: " rgba(64,64,64,1) ",
+    cinzaSecundario:  " rgba(255, 255, 255, 0.2)",
   },
 };
 
@@ -25,6 +26,8 @@ const styles = tema => {
     },
 }
 }
+
+
  
 
 export function GlobalStyles({ children }) {

@@ -1,5 +1,3 @@
-// import "./Mes.css";
-import { css } from "@emotion/react";
 import styled from "@emotion/styled";
 
 const CardEstilizado = styled.article`

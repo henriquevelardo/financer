@@ -2,13 +2,19 @@ import React, { useEffect, useState } from "react";
 import Input from "Componentes/Input";
 import BotaoPadrao from "Componentes/BotaoPadrao";
 import { recebeInputs, enviaInputs } from "Componentes/Api/Api";
+import styled from "@emotion/styled";
+
+const FormularioEstilizado = styled.form`
+  display: none;
+
+`;
 
 export default function Formulario({ formulario, setFormulario, operacao }) {
   const [inputNome, setInputNome] = useState([]);
   const [inputValor, setInputValor] = useState([]);
-  const [entradas, setEntradas] = useState([])
-  const [saidas, setSaidas] = useState([])
- 
+  const [entradas, setEntradas] = useState([]);
+  const [saidas, setSaidas] = useState([]);
+
   const escondeFormulario = () => {
     setTimeout(() => setFormulario(false), 50);
   };
@@ -16,12 +22,11 @@ export default function Formulario({ formulario, setFormulario, operacao }) {
   useEffect(() => {
     const requisicaoApi = async () => {
       const resposta = await recebeInputs();
-       setEntradas(resposta);
+      setEntradas(resposta);
     };
 
     requisicaoApi();
   }, []);
-
 
   // useEffect(() => {
   //   console.log("Atualização de estado: ", entradas);
@@ -38,14 +43,11 @@ export default function Formulario({ formulario, setFormulario, operacao }) {
       [inputNome]: inputValor,
     };
 
-    setEntradas([...entradas, novosDados])
-    
-  
+    setEntradas([...entradas, novosDados]);
   };
 
-
   return (
-    <form onSubmit={aoSalvar} className={`${formulario ? "mostra-input" : ""}`}>
+    <FormularioEstilizado onSubmit={aoSalvar} className={`${formulario ? "mostra-input" : ""}`}>
       <Input
         type={"text"}
         id={"inputModalNome"}
@@ -53,7 +55,7 @@ export default function Formulario({ formulario, setFormulario, operacao }) {
         digitaValor={(inputNome) => setInputNome(inputNome)}
         operacao={operacao}
       >
-        Digite o nome:
+        Descrição
       </Input>
       <Input
         type={"number"}
@@ -62,11 +64,15 @@ export default function Formulario({ formulario, setFormulario, operacao }) {
         digitaValor={(inputValor) => setInputValor(inputValor)}
         operacao={operacao}
       >
-        Digite o valor:
+        Valor
       </Input>
-      <BotaoPadrao type="submit" onClick={escondeFormulario}>
+      <BotaoPadrao 
+      type="submit" 
+      onClick={escondeFormulario}
+      hierarquia="salvar"
+      >
         Salvar
       </BotaoPadrao>
-    </form>
+    </FormularioEstilizado>
   );
 }

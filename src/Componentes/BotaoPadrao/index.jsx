@@ -1,22 +1,29 @@
-import React, { Children } from 'react'
-import styled from "@emotion/styled"
-// import "./BotaoPadrao.css"
+import styled from "@emotion/styled";
 
 const BotaoEstilizado = styled.button`
-  background-color:var(--cinza-padrao); 
+  background-color: ${(props) =>
+    props.hierarquia === "primaria"
+      ? props.theme.cores.cinzaPadrao
+      : props.theme.cores.branco};
   padding: 1rem;
-  color: var(--branco);
-  font-family: var(--fonte-principal);
+  color: ${(props) =>
+    props.hierarquia === "primaria"
+      ? props.theme.cores.branco
+      : props.theme.cores.preto};;
+  font-family: ${props => props.theme.fonte};
   text-align: center;
-  font-size: 15px;
-  width: 45%;
-`
+  font-size: 16px;
+  width: ${props => props.hierarquia === "salvar" ? "55%" : "45%"};
+`;
 
-export default function BotaoPadrao({children, onClick, type}) {
-
+export default function BotaoPadrao({ children, onClick, type, hierarquia }) {
   return (
-    <BotaoEstilizado className="btn-padrao" onClick={onClick} type={type} >
-        {children}
+    <BotaoEstilizado
+      onClick={onClick}
+      type={type}
+      hierarquia={hierarquia}
+    >
+      {children}
     </BotaoEstilizado>
-  )
+  );
 }
